@@ -6,12 +6,9 @@ script_name = os.path.basename(sys.argv[0])
 
 for file in os.listdir(folder):
     old_path = os.path.join(folder, file)
-
-    # skip the script/exe itself
+    
     if file == script_name:
         continue
-
-    # skip folders
     if not os.path.isfile(old_path):
         continue
 
